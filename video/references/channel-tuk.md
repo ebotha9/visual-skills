@@ -18,7 +18,8 @@ If this overlay and the channel docs disagree, the channel docs win. Flag the ga
 
 ## 2. Reading order and model choice
 
-- **Model file:** Kling 4.0 jobs read `kling-4.md`. Kling 3.0 element takes (for example the bee) read `kling.md`, sections 3 and 7. FLUX video jobs (free generations only) follow the FLUX MCP's own `flux-3-keyframes-continuation` and `flux-3-prompting` skills. Seedance and Veo files are not used.
+- **Which model:** follow the model rule in `preflight-gate.md` (provisional since 18 November 2026: Kling 3.0 for grounded shots driven by a start and end frame; Kling 4.0 for in-between keyframes, takes over 15 s and Impossible Kitchen shots).
+- **Model file:** Kling 4.0 jobs read `kling-4.md`. Kling 3.0 jobs (grounded start-and-end-frame takes, element takes such as the bee) read `kling.md`, sections 3 and 7; there is no negative-prompt field. The tested lessons in `kling-4.md` §4 (start and end frame, entry path, contact points, crop reads as zoom) apply to 3.0 takes too. FLUX video jobs (free generations only) follow the FLUX MCP's own `flux-3-keyframes-continuation` and `flux-3-prompting` skills. Seedance and Veo files are not used.
 - **Task files:** `role-modes.md` for shot lists. `fixes-and-skeletons.md` for diagnosing a failed take. `camera-lighting-vocabulary.md` only for words allowed by section 6 below.
 
 ## 3. Dramaturgy, read for a faceless food channel
