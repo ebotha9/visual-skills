@@ -1,7 +1,7 @@
 ---
 name: video
 license: CC-BY-4.0 (attribution required — Serge Shima, github.com/smixs/visual-skills)
-description: Use this skill whenever the user asks to create, improve, audit, or split prompts for AI video generators (Seedance, Kling, Veo, Runway, Luma, Pika, Sora, any image-to-video system). The skill also covers storyboards, shot lists, director treatments, dynamic montage, multi-clip story structure, camera direction, lighting, blocking, pacing, character continuity, dialogue, and sound design. Trigger even when the user says things like "придумай сцену для видео", "разбей на склейки", "сделай раскадровку", "улучши промпт для Kling", "переведи сценарий в промпты", "как снять X в AI-видео", or shares a prompt and asks to fix it — even if they never say the word "prompt". Do NOT use for still images (use the sibling image skill), for editing, colour-grading or assembling footage that already exists, or for writing feature-length screenplays with no generation step.
+description: Use this skill whenever the user asks to create, improve, audit, or split prompts for AI video generators (Seedance, Kling, Veo, Runway, Luma, Pika, Sora, any image-to-video system). The skill also covers storyboards, shot lists, director treatments, dynamic montage, multi-clip story structure, camera direction, lighting, blocking, pacing, character continuity, dialogue, and sound design. Trigger even when the user says things like "придумай сцену для видео", "разбей на склейки", "сделай раскадровку", "улучши промпт для Kling", "переведи сценарий в промпты", "как снять X в AI-видео", or shares a prompt and asks to fix it — even if they never say the word "prompt". Also use it for The Unreasonable Kitchen (YouTube channel) shot lists and Kling prompts, with references/channel-tuk.md. Do NOT use for still images (use the sibling image skill), for editing, colour-grading or assembling footage that already exists, or for writing feature-length screenplays with no generation step.
 ---
 
 # AI Director, Screenwriter & Editor
@@ -15,6 +15,8 @@ A beautiful frame without dramaturgy is wallpaper. A dramaturgically clean promp
 - **No idea or script yet** (user wants a concept, a Big Idea, a campaign, an ad scenario — not a prompt): if the `creative-director` skill is installed, start there — it develops ideas and scripts for commercials and beyond ([github.com/smixs/creative-director-skill](https://github.com/smixs/creative-director-skill)). Come back here once there is a script to shoot.
 - **Still keyframes, character sheets, animatic panels** to feed the video pipeline: use the sibling `image` skill, then return with the keyframes.
 - **A script or scene exists and needs prompts** — this skill. Continue below.
+
+- **Work for The Unreasonable Kitchen** (YouTube channel): follow the steps below, then read [channel-tuk.md](references/channel-tuk.md) **last**. It overrides this skill, and the channel's own prompt rulebook and pre-flight gate override it.
 
 ---
 
@@ -43,6 +45,7 @@ Use this short selector. The full reasoning is in the chosen file.
 | Seedance, ByteDance, Doubao, Jimeng, multi-shot in one clip, `--resolution`, `--duration`, `--camerafixed`, "Cut to", `@img1`, fast multi-shot drama | [seedance.md](references/seedance.md) |
 | **Seedance 2.5 production work**: 30s single-pass, 50-slot reference kits, video editing / partial re-render, extension, Ultra Long (30-180s), 3D blockout / green screen, `@Image N`, `{ }` dialogue markers | [seedance.md](references/seedance.md) **+** [seedance-25.md](references/seedance-25.md) |
 | Kling, Kuaishou, Element Binding, Motion Brush, Motion Control, dedicated negative prompt field, **Kling 3.0 multi-shot with `[Character A: ...]` labels, native dialogue + lip-sync, 15s, Turbo (cheap lip-sync), Omni (references + editing, 4K)** | [kling.md](references/kling.md) |
+| **Kling 4.0** (`kling-video-v4_0`): keyframe takes with up to 10 images, 3-30s single takes, Omni-Ref with up to 15 references, Kling 4.0 Flash | [kling-4.md](references/kling-4.md) (read instead of kling.md) |
 | Veo, Google video, dialogue / lip-sync, JSON prompts, synchronized SFX, commercial polish with voiceover | [veo.md](references/veo.md) |
 
 Default if nothing in the request hints at a model:
@@ -75,6 +78,8 @@ Before returning anything, run both checks:
 - Three-detail audit (`universal-rules.md` §13): each shot owns environmental pressure + physical micro-action + sound or visual motif.
 
 If any shot fails, fix before sending. This is the step the user has had to enforce repeatedly. Do not skip it.
+
+For The Unreasonable Kitchen, also apply `channel-tuk.md` and hand the prompt to the `tuk-kling-preflight` gate. Never run a paid job from this skill.
 
 ---
 

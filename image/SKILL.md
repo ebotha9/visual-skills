@@ -8,6 +8,8 @@ description: >
   product shots, UI mockups, storyboards, character sheets, edit/colorize, style transfer,
   vision analysis, image-to-prompt, nb, NBP, NB2, gpt-image-2.5, multi-panel grids,
   ecommerce product photography, fashion editorial, food/beverage ads, cinematic portraits.
+  Also for The Unreasonable Kitchen (YouTube channel) set, prop, hands, start and end frames,
+  via FLUX, with references/channel-tuk.md.
   Do NOT use for: video (use video skill), 3D models, audio, non-image tasks.
 ---
 
@@ -22,6 +24,8 @@ The body of this SKILL.md is intentionally thin so you cannot fake a result by r
 - **Motion, clips, montage** (Seedance, Kling, Veo, any image-to-video): use the sibling `video` skill. This skill's storyboard and keyframe outputs feed it.
 - **No idea or script yet** (user wants a concept or an ad scenario, not a picture): if the `creative-director` skill is installed, start there — it develops ideas and scripts for commercials and beyond ([github.com/smixs/creative-director-skill](https://github.com/smixs/creative-director-skill)).
 - **A concrete image is needed** — this skill. Continue below.
+
+- **Work for The Unreasonable Kitchen** (YouTube channel): read [channel-tuk.md](references/channel-tuk.md) first for the model and reading order (FLUX replaces steps 1-2), then again **last**. It overrides this skill, and the channel's own pre-flight gate overrides it.
 
 ---
 
