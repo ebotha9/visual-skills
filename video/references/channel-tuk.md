@@ -70,6 +70,8 @@ If this overlay and the channel docs disagree, the channel docs win. Flag the ga
 - **Never the human cause:** no "just dropped in", "freshly cracked", "just set down". Describe the state.
 - **Counts:** never above one in a prompt. Quantities live in the frames.
 - **Comparisons** get drawn literally ("like a building" becomes a building). Use them only in narration, never in a prompt.
+- **Negatives:** write what the scene contains ("lands with a soft, heavy slump and lies still", not "without bouncing"). The only negatives allowed are the standing tail and a specific exclusion next to its positive ("one continuous master shot, no cuts").
+- **No negative-prompt field.** Kling 3.0 and 4.0 through the MCP have none. Drop every "Negative field" block from the upstream skeletons.
 - **Standing tail:** every prompt ends "No background music, no subtitles."
 
 ## 7. Physics and known failure points
